@@ -1,0 +1,10 @@
+
+2월 03, 2021 13:27:48.80 NEW SESSION
+2월 03, 2021 13:27:48.80 [35900:39748:0203/132748.800:ERROR:device_event_log_impl.cc(211)] [13:27:48.800] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+2월 04, 2021 08:37:50.78 [37312:31388:0204/083750.785:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+2월 04, 2021 08:38:55.68 [37312:35320:0204/083855.681:ERROR:device_event_log_impl.cc(211)] [08:38:55.682] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+2월 05, 2021 08:45:03.88 [37312:31388:0205/084503.884:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+2월 05, 2021 14:02:59.84 [37312:31388:0205/140259.844:ERROR:mcs_client.cc(755)] Received close command, resetting connection.
+2월 06, 2021 23:31:20.66 [37312:41056:0206/233120.667:ERROR:gcm_store_impl.cc(638)] LevelDB remove failed: NotFound: 
+2월 06, 2021 23:31:20.67 [37312:31388:0206/233120.667:ERROR:mcs_client.cc(526)] GCM Update failed!
+2월 08, 2021 09:59:31.25 [37312:31388:0208/095930.612:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105

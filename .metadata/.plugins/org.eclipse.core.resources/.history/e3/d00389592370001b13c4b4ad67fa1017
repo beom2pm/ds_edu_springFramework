@@ -1,0 +1,11 @@
+
+drop table board;
+create table board
+( num  number(4) constraint board_num_pk PRIMARY KEY,
+  title varchar2(20),
+  author varchar2(20),
+  content varchar2(200),
+  writeday date DEFAULT sysdate,
+  readcnt number(4) DEFAULT 0);
+  
+ create sequence board_num;

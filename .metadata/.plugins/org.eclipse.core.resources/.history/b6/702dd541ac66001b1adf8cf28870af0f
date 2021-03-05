@@ -1,0 +1,22 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class BoardController {
+
+	//글쓰기 화면
+	@RequestMapping("/write")
+	public String writeUI() {
+		return "write";
+	}
+	
+	//글쓰기 - post
+	@RequestMapping("/write")
+	public String write() {
+		return "write";
+	}
+	
+	
+}

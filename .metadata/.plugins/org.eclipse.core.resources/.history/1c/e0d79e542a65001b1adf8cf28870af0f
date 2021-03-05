@@ -1,0 +1,9 @@
+package com.dao;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public interface DBDao {
+
+	public abstract List<Dept> list(SqlSessionFactory session);
+}
+

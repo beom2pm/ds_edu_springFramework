@@ -1,0 +1,11 @@
+package com.dto;
+
+public class Board {
+	int num;
+	String title;
+	String author;
+	String content;
+	String  writeday;
+	int  readcnt;
+
+}

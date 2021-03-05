@@ -1,0 +1,42 @@
+package com.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.dto.Notice;
+@Repository
+public class DBOracleDAO_s implements DBDao {
+
+	@Override
+	public List<Notice> boardList(SqlSessionTemplate session) {
+		return session.selectList("BoardMapper.boardList");
+	}
+
+	@Override
+	public Notice selectByNum(SqlSessionTemplate session, int num) {
+		int num2 = session.update("BoardMapper.readcntUpdate",num);
+		return session.selectOne("BoardMapper.selectByNum",num);
+	}
+
+
+	@Override
+	public int boardWrite(SqlSessionTemplate session, Notice board) {
+		return session.insert("BoardMapper.boardWrite",board);
+	}
+
+	@Override
+	public int boardUpdate(SqlSessionTemplate session, Notice board) {
+		// TODO Auto-generated method stub
+		return session.update("BoardMapper.boardUpdate",board);
+	}
+
+
+	@Override
+	public int boardDelete(SqlSessionTemplate session, int num) {
+		// TODO Auto-generated method stub
+		return session.delete("BoardMapper.boardDelete",num);
+	}
+
+}

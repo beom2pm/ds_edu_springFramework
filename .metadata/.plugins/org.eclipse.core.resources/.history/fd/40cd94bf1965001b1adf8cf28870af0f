@@ -1,0 +1,13 @@
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		// IoC Container
+		
+		GenericXmlApplicationContext ctx =
+				new GenericXmlApplicationContext("com/config/test.xml","com/config/test2.xml");
+
+	}
+
+}

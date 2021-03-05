@@ -1,0 +1,30 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/*
+ * 경로지정
+ * 
+ * 1. 절대경로
+ *   ===> / 로시작
+ *
+ * 2. 상대경로
+ *   ===> 로 시작안함
+ *
+ */
+@Controller
+public class LoginController {
+
+	@RequestMapping("/loginForm")
+	public String loginForm() {
+		System.out.println("loginForm");
+		return "loginForm"; // WEB-INF/views/loginForm.jsp를 찾아줌
+	}
+	
+	@RequestMapping("/login")
+	public String login() {
+		System.out.println("login");
+		return "loginForm";
+	}
+}

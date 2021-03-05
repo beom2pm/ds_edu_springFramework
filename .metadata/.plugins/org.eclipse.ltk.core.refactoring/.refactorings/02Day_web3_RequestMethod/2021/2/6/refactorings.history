@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.dto&apos; to &apos;03Day_web_request_model_view/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;02Day_web3_RequestMethod&apos;&#x0D;&#x0A;- Destination element: &apos;03Day_web_request_model_view/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;02Day_web3_RequestMethod/src/main/java/com.dto&apos;" description="Copy package" destination="=03Day_web_request_model_view/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.dto" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1612400459929" version="1.0"/>
+</session>

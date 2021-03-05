@@ -1,0 +1,45 @@
+package com.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.dto.Board;
+import com.service.DBService;
+
+@Controller
+public class BoardController {
+
+	@Autowired
+	DBService service;
+	
+	// 글쓰기 화면보기- GET - 화면만 보여주는 애는 등록하지 않고도 
+//	@GetMapping("/write")
+//	public String writeUI() {
+//		System.out.println("writeUI");
+//		return "write";
+//	}
+
+	// 글쓰기- POST
+	@PostMapping("/write")
+	public String write(Board board) {
+		System.out.println("write");
+		int num = service.boardWrite(board);
+		//그냥 list.jsp로 보내면 안됨
+		return "redirect:list";
+	}
+	
+	// 글쓰기- POST
+	@RequestMapping("/list")
+	public String list(Model m) {
+		List<Board> list = service.boardList(); //model
+		m.addAttribute("boardList", list); //list.jsp에서 ${boardList}로 참조가능
+		return "list"; //WEB-INF/views/list.jsp
+	}
+
+}

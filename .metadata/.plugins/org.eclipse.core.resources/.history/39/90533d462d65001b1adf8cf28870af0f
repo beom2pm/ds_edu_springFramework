@@ -1,0 +1,10 @@
+package com.service;
+
+import java.util.List;
+
+import com.dto.Dept;
+
+public interface DBService {
+
+	public abstract List<Dept> list();
+}

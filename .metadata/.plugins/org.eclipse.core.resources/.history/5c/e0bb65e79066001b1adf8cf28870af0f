@@ -1,0 +1,16 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.dto.User;
+
+@Controller
+public class MainController {
+
+	@RequestMapping("/main")
+	public User main() {
+		User user = new User("hong","1245");
+		return user;
+	}
+}

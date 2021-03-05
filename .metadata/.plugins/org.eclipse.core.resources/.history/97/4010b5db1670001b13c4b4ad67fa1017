@@ -1,0 +1,16 @@
+package com.service;
+
+import java.util.List;
+
+import com.dao.DBDao;
+
+public class DBService {
+
+	DBDao dao;
+
+	
+	public List<String> list(){
+		return dao.list();
+	}
+	
+}

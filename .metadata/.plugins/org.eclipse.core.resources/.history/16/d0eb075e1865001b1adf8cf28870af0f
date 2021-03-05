@@ -1,0 +1,11 @@
+package com.service;
+
+public class DBService2 {
+
+	public DBService2() {
+		System.out.println("DBService 생성자");
+	}
+	
+	
+
+}

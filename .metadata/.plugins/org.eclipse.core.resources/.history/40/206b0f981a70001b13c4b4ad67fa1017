@@ -1,0 +1,39 @@
+package com.service;
+
+import java.util.List;
+
+import com.dto.Notice;
+
+public class DBOracleService implements DBService {
+
+	@Override
+	public List<Notice> noticeList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Notice selectByNo(int no) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int noticeWrite(Notice board) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int noticeUpdate(Notice board) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int noticeDelete(int no) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

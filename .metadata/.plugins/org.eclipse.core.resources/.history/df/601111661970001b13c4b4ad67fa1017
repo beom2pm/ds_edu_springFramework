@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="NoticeMapper">
+   
+    <select id="noticeList" resultType="Notice">
+      select 
+      	no,
+      	title,
+      	author,
+      	content,
+      	to_char(writeday,'YYYY/MM/dd') as writeday,
+      	readcnt
+      from notice
+      order by num desc
+    </select>
+    
+    <select id="selectByNo" parameterType="int" resultType="Notice" >
+       select 
+      	no,
+      	title,
+      	author,
+      	content,
+      	writeday,
+      	readcnt
+      from notice
+      where no = #{no}
+    </select>
+
+     <insert id="noticeWrite" parameterType="Board">
+        insert into notice (num,title,author,content)
+        values ( notice_no.nextval, #{title}, #{author}, #{content})
+     </insert>
+     
+     <update id="noticeUpdate" parameterType="Board">
+        update notice
+        set title=#{title}, author=#{author}, content=#{content}
+        where num=#{num}
+     </update>
+     
+     <delete id="noticeDelete" parameterType="int">
+       delete from yejinTest
+       where num=#{num}
+     </delete>
+     
+     <update id="readcntUpdate" parameterType="int">
+        update yejinTest
+        set readcnt= readcnt+1
+        where num=#{num}
+     </update>
+</mapper>
+
+
+
+
+
+

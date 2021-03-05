@@ -1,0 +1,9 @@
+package com.service;
+
+import com.dao.DBDao;
+
+public class DBService {
+
+	DBDao dao;
+	
+}

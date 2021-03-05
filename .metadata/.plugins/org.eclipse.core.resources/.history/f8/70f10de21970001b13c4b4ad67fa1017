@@ -1,0 +1,41 @@
+package com.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+
+import com.dto.Notice;
+
+public class DBOracleDAO implements DBDao {
+
+	@Override
+	public List<Notice> noticeList(SqlSessionTemplate session) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Notice selectByNo(SqlSessionTemplate session, int no) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int noticeWrite(SqlSessionTemplate session, Notice board) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int noticeUpdate(SqlSessionTemplate session, Notice board) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int noticeDelete(SqlSessionTemplate session, int no) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.service;
+
+import java.util.List;
+
+import com.dto.Board;
+
+// 2가지: DBOracleDAO, SqlSessionTemplate
+public class DBOracleService implements DBService {
+
+	@Override
+	public List<Board> boardList() {
+		return null;
+	}
+
+	@Override
+	public Board selectByNum(int num) {
+		return null;
+	}
+
+	@Override
+	public int boardWrite(Board board) {
+		return 0;
+	}
+
+	@Override
+	public int boardUpdate(Board board) {
+		return 0;
+	}
+
+	@Override
+	public int boardDelete(int num) {
+		return 0;
+	}
+
+}

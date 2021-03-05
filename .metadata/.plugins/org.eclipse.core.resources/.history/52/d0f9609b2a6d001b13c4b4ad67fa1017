@@ -1,0 +1,96 @@
+package com.service;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dao.MemberDao;
+import com.dto.Member;
+
+
+
+
+@Service
+public class MemberServiceImpl implements MemberService {
+	
+	@Autowired
+	MemberDao dao;
+	
+	@Override
+	public int memberNewPwdUpdate(Map<String, String> cP) {
+		// TODO Auto-generated method stub
+		return dao.memberNewPwdUpdate(cP);
+	}
+
+	@Override
+	public Member memberFind(Map<String, String> findMember) {
+		// TODO Auto-generated method stub
+		return dao.memberFind(findMember);
+	}
+
+	@Override
+	public String memberIdFind(String memberEmail) {
+		// TODO Auto-generated method stub
+		return dao.memberIdFind(memberEmail);
+	}
+
+	@Override
+	public Member memberLogin(String memberId) {
+		return dao.memberLogin(memberId);
+	}
+
+	@Override
+	public int memberEnroll(Member m) {
+		return dao.memberEnroll(m);
+	}
+
+
+	@Override
+	public int checkId(String memberId) {
+		return dao.checkId(memberId);
+	}
+
+	@Override
+	public int memberUpdate(Member m) {
+		// TODO Auto-generated method stub
+		return dao.memberUpdate(m);
+	}
+
+	@Override
+	public int memberWithdrawal(String memberNo) {
+		// TODO Auto-generated method stub
+		return dao.memberWithdrawal(memberNo);
+	}
+
+
+	@Override
+	public int memberPwdUpdate(Member m) {
+		// TODO Auto-generated method stub
+		return dao.memberPwdUpdate(m);
+	}
+
+
+	@Override
+	public int checkEmail(String memberEmail) {
+		// TODO Auto-generated method stub
+		return dao.checkEmail(memberEmail);
+	}
+
+	@Override
+	public int changeProfile(Member m) {
+		// TODO Auto-generated method stub
+		return dao.changeProfile(m);
+	}
+	
+
+	@Override
+	public Member memberEmailFind(String memberEmail) {
+		// TODO Auto-generated method stub
+		return dao.memberEmailFind(memberEmail);
+	}
+
+	
+	
+}

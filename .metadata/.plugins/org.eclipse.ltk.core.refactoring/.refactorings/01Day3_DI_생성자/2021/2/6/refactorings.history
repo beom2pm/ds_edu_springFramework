@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DBService.java&apos; to &apos;02Day3_DI/src/main/java/com.service&apos;&#x0D;&#x0A;- Original project: &apos;02Day3_DI&apos;&#x0D;&#x0A;- Destination element: &apos;02Day3_DI/src/main/java/com.service&apos;&#x0D;&#x0A;- Original element: &apos;com.service.DBService.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{DBService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1612245916555" units="1" version="1.0"/>
+</session>

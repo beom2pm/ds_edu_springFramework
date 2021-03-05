@@ -1,0 +1,19 @@
+package com.service;
+
+public class MyService {
+	
+	//변수, property
+	public String name;
+
+	public MyService() {
+	}
+
+	//생성ㅇ자 주입
+	public MyService(String x) {
+		System.out.println("DBService 생성자~~~~");
+		this.name = x;
+	}
+	
+	
+
+}

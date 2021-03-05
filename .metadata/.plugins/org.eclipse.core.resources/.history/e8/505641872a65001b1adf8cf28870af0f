@@ -1,0 +1,6 @@
+package com.service;
+
+public interface DBService {
+
+	public abstract List<Dept> list();
+}

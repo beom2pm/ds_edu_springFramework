@@ -1,0 +1,16 @@
+package com.service;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+
+import com.dto.Notice;
+
+public interface DBService {
+
+	public abstract List<Notice> boardList();
+	public abstract Notice selectByNum( int num);
+	public abstract int boardWrite(Notice board);
+	public abstract int boardUpdate( Notice board);
+	public abstract int boardDelete( int num);
+}

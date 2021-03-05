@@ -1,0 +1,77 @@
+package com.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.dto.Notice;
+import com.service.DBService;
+
+@Controller
+public class NoticeController {
+
+	@Autowired
+	DBService service;
+	
+	/*// 글쓰기- POST
+	    @PostMapping("/write")
+		public String write(Notice notice) {
+			int num = service.noticeWrite(notice);
+			return "redirect:list";
+		}*/
+	    
+	  //글쓰기 화면
+		@GetMapping(value="/write")
+		public String writeUI() {
+			return "writeForm";
+		}
+		
+		//글쓰기
+		@PostMapping("/write")
+		public String write(Notice notice) {
+			int num = service.noticeWrite(notice);
+			return "redirect:list";
+		}
+
+		// 글목록보기
+		@RequestMapping("/list")
+		public String list(Model m) {
+			List<Notice> list = service.noticeList(); // Model
+			m.addAttribute("noticeList", list); // list.jsp에서 ${boardList}로 참조가능
+			return "list"; // /WEB-INF/views/list.jsp
+		}
+
+		// 글 자세히보기
+		//model o, jsp x  => 뷰를 유추해야함 
+		@RequestMapping("/retrieve") // /WEB-INF/views/retrieve.jsp , ${xyz} 참조 가능
+		@ModelAttribute("xyz")
+		public Notice retrieve(@RequestParam("no") int kkk) {
+			Notice board = service.selectByNo(kkk);
+			return board;
+		}
+
+
+		// 글수정 ==> 목록
+		@RequestMapping(value = "/update", method = RequestMethod.POST)
+		public String update(Notice notice) {
+			int num = service.boardUpdate(notice);
+			return "redirect:list";
+		}
+
+		// 글삭제 ==> 목록
+		@RequestMapping(value = "/delete", method = RequestMethod.GET)
+		public String delete(@RequestParam int num) {
+			int num2 = service.boardDelete(num);
+			return "redirect:list";
+		}
+}
